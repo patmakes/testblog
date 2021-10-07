@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link :to="{ name: 'About' }">About</router-link> |
+      <router-link :to="{ name: 'Blog' }">Blog</router-link> |
+      <router-link :to="{ name: 'BlogShow' }">BlogShow</router-link> |
+      <router-link :to="{ name: 'PostCreate' }">PostCreate</router-link> |
     </div>
     <router-view />
   </div>
@@ -28,5 +31,13 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.eyebrow {
+  font-size: 10pt;
+}
+
+.-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
 }
 </style>
