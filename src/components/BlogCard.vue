@@ -1,5 +1,4 @@
 <template>
-  <router-link :to="{ name: 'BlogShow', params: { id: post.id } }">
     <div class="blog-card">
   <div class="blog-image -shadow" :style="{ backgroundImage: 'url(' + post.Image + ')' }">
     
@@ -9,7 +8,6 @@
     <span class="date">{{post.date}}</span>
     </div>
   </div>
-  </router-link>
 </template>
 
 <script>

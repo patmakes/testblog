@@ -4,9 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link> |
       <router-link :to="{ name: 'Blog' }">Blog</router-link> |
-      <router-link :to="{ name: 'BlogShow' }">BlogShow</router-link> |
+     <!-- <router-link :to="{ name: 'BlogShow' }">BlogShow</router-link> |
       <router-link :to="{ name: 'PostCreate' }">PostCreate</router-link> |
-    </div>
+-->    </div>
     <router-view />
   </div>
 </template>

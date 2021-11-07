@@ -29,7 +29,7 @@ const routes = [
     component: Blog,
   },
   {
-    path: "/blog/:id",
+    path: "/blog#top",
     name: "BlogShow",
     component: BlogShow,
     props: true,
