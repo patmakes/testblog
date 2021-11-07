@@ -1,6 +1,6 @@
 <template>
   <div class="blogwrap">
-    <h1>Blog</h1>
+    <h1>Pat Makes Posts</h1>
     <div class="blog">
     <BlogCard v-for="post in posts" :key="post.id" :post="post"/>
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 import BlogCard from '../components/BlogCard.vue';
-import BlogService from '@/services/BlogService.js'
+// import BlogService from '@/services/BlogService.js'
 
 export default {
     components: {
@@ -21,18 +21,29 @@ export default {
       }
     },
     created() {
-  BlogService.getPosts()
-    .then((response) => {
-      this.posts = response.data;
-    })
-    .catch(error => {
-      console.log('There was an error:'+''+ error.response)
-    });
+     
+
+
+  fetch('https://raw.githubusercontent.com/patmakesmusic/pmmBlogger/main/blogdb.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.posts)
+    var postsRaw = data.posts
+   var sorted = postsRaw.sort((a, b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0 ));
+   this.posts = sorted.reverse()
+   console.log(sorted)
+
+  }
+  );
 }
 }
 </script>
 
 <style scoped>
+
+h1 {
+  text-shadow: 2px 2px red;
+}
 .blogwrap {
   max-width: 580px;
   justify-content: center;
@@ -42,7 +53,9 @@ export default {
 .blog {
     display: flex;
     flex-wrap: wrap;
-    min-width: 300px;
+    min-width: 125px;
+    justify-content: center;
+    align-items: center;
 }
 
 </style>

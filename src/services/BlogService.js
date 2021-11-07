@@ -1,19 +1,19 @@
-import axios from 'axios'
+// import axios from 'axios'
 
-const apiClient = axios.create({
-    baseURL: 'http://localhost:3000',
-    withCredentials: false,
-    headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-    }
-})
+// const jsonLocation = 'https://raw.githubusercontent.com/patmakesmusic/pmmBlogger/main/blogdb.json'
+
+// const apiClient = axios.create({
+//     baseURL: '',
+//     withCredentials: false,
+//     headers: {
+//         Accept: 'application/json',
+//         'Content-Type': 'application/json'
+//     }
+// })
 
 export default {
-    getPosts() {
-        return apiClient.get('/posts')
-    },
-    getPost(id) {
-        return apiClient.get('/posts/' + id)
-    }
-}
+    
+    };
+    // getPost(id) {
+    //     return apiClient.get('/posts/' + id)
+    // }

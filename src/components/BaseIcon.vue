@@ -18,8 +18,8 @@
   font-size: 1rem;
   font-weight: 600;
   margin-right: 6px;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   background: url("../assets/svg/musicnote.svg") no-repeat;
   opacity: 60%;
 }
